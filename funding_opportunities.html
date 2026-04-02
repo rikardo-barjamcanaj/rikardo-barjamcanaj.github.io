@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanziamenti per startup AI in Italia ed Europa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+    :root {
+      --teal-50:  hsla(172, 40%, 97%, 1);
+      --teal-100: hsla(172, 42%, 93%, 1);
+      --teal-200: hsla(172, 45%, 85%, 1);
+      --teal-300: hsla(172, 50%, 72%, 1);
+      --teal-400: hsla(172, 55%, 55%, 1);
+      --teal-500: hsla(172, 65%, 38%, 1);
+      --teal-600: hsla(172, 65%, 32%, 1);
+      --teal-700: hsla(172, 65%, 26%, 1);
+      --teal-800: hsla(172, 50%, 18%, 1);
+      --teal-900: hsla(172, 40%, 12%, 1);
+      --teal-950: hsla(172, 30%, 8%, 1);
+      --amber-400: hsla(38, 78%, 62%, 1);
+      --amber-500: hsla(38, 80%, 55%, 1);
+      --brand:        hsla(172, 65%, 38%, 1);
+      --brand-hover:  hsla(172, 65%, 32%, 1);
+      --brand-press:  hsla(172, 65%, 26%, 1);
+      --brand-subtle: hsla(172, 40%, 94%, 1);
+      --brand-muted:  hsla(172, 25%, 70%, 1);
+      --accent:        hsla(38, 80%, 55%, 1);
+      --accent-subtle: hsla(38, 40%, 92%, 1);
+      --text-strong:   hsla(172, 30%, 15%, 1);
+      --text-weak:     hsla(172, 12%, 42%, 1);
+      --text-disabled: hsla(172, 6%, 62%, 1);
+      --text-muted:    hsla(172, 8%, 55%, 1);
+      --stroke-strong: hsla(172, 10%, 58%, 1);
+      --stroke-weak:   hsla(172, 6%, 88%, 1);
+      --fill:          hsla(172, 8%, 96%, 1);
+      --background:    hsla(0, 0%, 100%, 1);
+      --dark-bg-base:    hsla(172, 20%, 8%, 1);
+      --dark-bg-raised:  hsla(172, 16%, 12%, 1);
+      --dark-bg-overlay: hsla(172, 12%, 16%, 1);
+      --dark-brand:      hsla(172, 50%, 60%, 1);
+      --dark-text-strong:   hsla(172, 15%, 93%, 1);
+      --dark-text-base:     hsla(172, 10%, 78%, 1);
+      --dark-text-weak:     hsla(172, 8%, 55%, 1);
+      --dark-text-disabled: hsla(172, 5%, 38%, 1);
+      --dark-stroke-strong: hsla(172, 10%, 30%, 1);
+      --dark-stroke-weak:   hsla(172, 8%, 18%, 1);
+      --dark-accent:        hsla(38, 75%, 62%, 1);
+      --shadow-xs:      0 1px 2px hsla(172, 30%, 15%, 0.05);
+      --shadow-raised:  0 1px 3px hsla(172, 30%, 15%, 0.08), 0 1px 2px hsla(172, 30%, 15%, 0.12);
+      --shadow-md:      0 4px 6px hsla(172, 30%, 15%, 0.07), 0 2px 4px hsla(172, 30%, 15%, 0.06);
+      --shadow-overlay: 0 10px 30px hsla(172, 30%, 15%, 0.10), 0 4px 12px hsla(172, 30%, 15%, 0.06);
+      --shadow-xl:      0 20px 50px hsla(172, 30%, 15%, 0.12), 0 8px 20px hsla(172, 30%, 15%, 0.08);
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --duration-fast:    150ms;
+      --duration-base:    250ms;
+      --duration-slow:    400ms;
+      --duration-slower:  600ms;
+      --radius-xs:   4px;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   32px;
+      --radius-full: 9999px;
+      --space-2xs: 4px;
+      --space-xs:  8px;
+      --space-sm:  16px;
+      --space-md:  24px;
+      --space-lg:  32px;
+      --space-xl:  48px;
+      --space-2xl: 64px;
+    }
+
+    [data-theme="dark"] {
+      --background:    var(--dark-bg-base);
+      --fill:          var(--dark-bg-raised);
+      --text-strong:   var(--dark-text-strong);
+      --text-weak:     var(--dark-text-base);
+      --text-disabled: var(--dark-text-disabled);
+      --text-muted:    var(--dark-text-weak);
+      --stroke-strong: var(--dark-stroke-strong);
+      --stroke-weak:   var(--dark-stroke-weak);
+      --brand:         var(--dark-brand);
+      --brand-hover:   hsla(172, 50%, 54%, 1);
+      --brand-press:   hsla(172, 50%, 48%, 1);
+      --brand-subtle:  hsla(172, 30%, 14%, 1);
+      --brand-muted:   hsla(172, 20%, 35%, 1);
+      --accent:        var(--dark-accent);
+      --accent-subtle: hsla(38, 30%, 16%, 1);
+      --shadow-xs: none;
+      --shadow-raised: none;
+      --shadow-md: none;
+      --shadow-overlay: none;
+      --shadow-xl: none;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow: hidden; height: 100%; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--background);
+      color: var(--text-strong);
+      height: 100%;
+      overflow: hidden;
+    }
+    #particle-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--stroke-weak);
+      z-index: 100;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 6.67%;
+      background: linear-gradient(90deg, var(--brand), var(--dark-brand));
+      transition: width 0.5s var(--ease-out);
+    }
+    .slide-counter {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-disabled);
+      z-index: 100;
+      letter-spacing: 0.05em;
+    }
+    .slide-counter .current { color: var(--brand); font-weight: 600; }
+    .theme-toggle {
+      position: fixed;
+      bottom: 1.85rem;
+      right: 5.5rem;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--stroke-strong);
+      background: var(--fill);
+      color: var(--text-weak);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      transition: all var(--duration-fast) var(--ease-out);
+      padding: 0;
+    }
+    .theme-toggle:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      background: var(--brand-subtle);
+    }
+    .theme-toggle:focus { outline: 2px solid var(--brand); outline-offset: 2px; }
+    .theme-toggle svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2;
+      fill: none;
+      stroke: currentColor;
+    }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    .slide-nav {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      z-index: 100;
+    }
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1.5px solid var(--stroke-strong);
+      background: transparent;
+      cursor: pointer;
+      transition: all var(--duration-base) var(--ease-out);
+      padding: 0;
+    }
+    .nav-dot:hover { border-color: var(--brand); }
+    .nav-dot.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      transform: scale(1.3);
+    }
+    .slides-container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      z-index: 1;
+      scrollbar-width: none;
+    }
+    .slides-container::-webkit-scrollbar { display: none; }
+    .slide {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 4rem 2rem;
+    }
+    .slide-content {
+      max-width: 1100px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .slide:nth-child(odd) { background: var(--background); }
+    .slide:nth-child(even) { background: var(--fill); }
+    [data-theme="dark"] .slide:nth-child(even) {
+      background: linear-gradient(135deg, var(--dark-bg-base) 0%, var(--dark-bg-overlay) 100%);
+    }
+    .slide-title-bg { background: var(--brand-subtle) !important; }
+    [data-theme="dark"] .slide-title-bg {
+      background: radial-gradient(ellipse at 50% 50%, var(--dark-bg-raised) 0%, var(--dark-bg-base) 70%) !important;
+    }
+    .slide-closing-bg {
+      background: radial-gradient(ellipse at 50% 50%, var(--brand-subtle) 0%, var(--background) 70%) !important;
+    }
+    [data-theme="dark"] .slide-closing-bg {
+      background: radial-gradient(ellipse at 50% 50%, hsla(172, 65%, 38%, 0.08) 0%, var(--dark-bg-base) 70%) !important;
+    }
+    .section-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      margin-bottom: 1rem;
+    }
+    .slide-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: var(--text-strong);
+    }
+    .slide-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-weak);
+      line-height: 1.7;
+      max-width: 820px;
+    }
+    .display-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.6rem, 6vw, 5.3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-strong);
+    }
+    .highlight { color: var(--brand); }
+    .card {
+      background: var(--fill);
+      border: 1px solid var(--stroke-weak);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      transition: all var(--duration-base) var(--ease-out);
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--brand-muted);
+      box-shadow: var(--shadow-overlay);
+    }
+    .card-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+    }
+    .card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: var(--text-strong);
+    }
+    .card-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: 2rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--stroke-weak);
+    }
+    .comparison-col { padding: 2rem; }
+    .comparison-col.old { background: var(--fill); }
+    .comparison-col.new { background: var(--brand-subtle); }
+    .comparison-col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 1.5rem;
+      color: var(--text-weak);
+    }
+    .comparison-col.new h3 { color: var(--accent); }
+    .comparison-item {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--stroke-weak);
+    }
+    .comparison-col.new .comparison-item {
+      color: var(--text-weak);
+      font-weight: 500;
+    }
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2.5rem;
+      position: relative;
+      padding-top: 2rem;
+      gap: 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0.6rem;
+      left: 5%;
+      right: 5%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--stroke-weak) 100%);
+    }
+    .timeline-step { flex: 1; text-align: center; position: relative; }
+    .timeline-step::before {
+      content: '';
+      position: absolute;
+      top: -1.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--background);
+    }
+    .timeline-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .timeline-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-strong);
+      margin-bottom: 0.4rem;
+    }
+    .timeline-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      padding: 0 0.5rem;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .value-item {
+      padding: 1.2rem;
+      border-left: 2px solid var(--accent);
+      background: var(--fill);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .value-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+    .value-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity var(--duration-slower) var(--ease-out), transform var(--duration-slower) var(--ease-out);
+    }
+    .visible { opacity: 1; transform: translateY(0); }
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+    .title-tagline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.1rem, 2.7vw, 2rem);
+      color: var(--accent);
+      margin: 1rem 0;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .title-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-weak);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid var(--stroke-strong);
+      border-radius: var(--radius-full);
+      color: var(--text-weak);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+      background: hsla(0, 0%, 100%, 0.02);
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .summary-list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+    }
+    .summary-list li {
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--stroke-weak);
+      border-radius: var(--radius-sm);
+      background: var(--fill);
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+    .label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .fund-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin: 1.2rem 0 1.5rem;
+    }
+    .meta-chip,
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--stroke-strong);
+      background: var(--brand-subtle);
+      color: var(--text-weak);
+      font-size: 0.78rem;
+      line-height: 1.2;
+    }
+    .status-pill {
+      background: var(--accent-subtle);
+      border-color: hsla(38, 40%, 65%, 0.45);
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .detail-block,
+    .decision-card {
+      background: var(--fill);
+      border: 1px solid var(--stroke-weak);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.5rem;
+    }
+    .detail-block { margin-bottom: 1rem; }
+    .detail-block:last-child { margin-bottom: 0; }
+    .detail-title,
+    .decision-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+    .detail-text,
+    .detail-list li,
+    .decision-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .detail-list {
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+    }
+    .detail-list strong,
+    .decision-card strong {
+      color: var(--text-weak);
+      font-weight: 600;
+    }
+    .table-wrap {
+      margin-top: 1.8rem;
+      border: 1px solid var(--stroke-weak);
+      border-radius: var(--radius-md);
+      overflow: auto;
+      background: var(--fill);
+    }
+    .fund-table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+    }
+    .fund-table th,
+    .fund-table td {
+      text-align: left;
+      padding: 1rem;
+      border-bottom: 1px solid var(--stroke-weak);
+      vertical-align: top;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+    .fund-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      background: var(--brand-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .fund-table td { color: var(--text-muted); }
+    .fund-table td:first-child,
+    .fund-table td:nth-child(2) {
+      color: var(--text-weak);
+      font-weight: 500;
+    }
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .decision-card p { margin-bottom: 0.75rem; }
+    .decision-card p:last-child { margin-bottom: 0; }
+    .note-strip {
+      margin-top: 1.3rem;
+      padding: 1rem 1.2rem;
+      border-left: 3px solid var(--accent);
+      background: var(--fill);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      line-height: 1.65;
+    }
+    .closing-domains {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .closing-domain {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-weak);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        transition: opacity var(--duration-base) var(--ease-out);
+        transform: none !important;
+      }
+    }
+    @media (max-width: 900px) {
+      .grid-2, .grid-3, .comparison, .summary-grid, .detail-layout, .decision-grid { grid-template-columns: 1fr; }
+      .timeline { flex-direction: column; gap: 1.5rem; padding-top: 0; }
+      .timeline::before { display: none; }
+      .timeline-step { text-align: left; padding-left: 2rem; }
+      .timeline-step::before { left: 0; top: 50%; transform: translateY(-50%); }
+      .slide-nav { display: none; }
+      .slides-container { scroll-snap-type: none; }
+      .slide {
+        scroll-snap-align: none;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        padding: 2rem 1.2rem;
+      }
+      .slide-title { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+      .slide-subtitle { font-size: 0.98rem; margin-bottom: 1.4rem; }
+      .card, .decision-card, .detail-block { padding: 1.2rem; }
+      .theme-toggle { bottom: 1rem; right: 4.5rem; }
+      .slide-counter { bottom: 1rem; right: 1rem; font-size: 0.7rem; }
+    }
+    @media (max-width: 600px) {
+      .slide { padding: 1.5rem 1rem; }
+      .grid-5 { grid-template-columns: repeat(2, 1fr); }
+      .card-title { font-size: 0.92rem; }
+      .card-body, .decision-card p, .detail-text, .detail-list li { font-size: 0.82rem; }
+      .display-text { font-size: clamp(2rem, 5vw, 3.4rem); }
+      .section-number { font-size: 0.6rem; margin-bottom: 0.6rem; }
+      .fund-table th, .fund-table td { padding: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="slide-counter"><span class="current" id="counterCurrent">1</span> / <span id="counterTotal">15</span></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+    <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+  <nav class="slide-nav" id="slideNav"></nav>
+  <main class="slides-container" id="slidesContainer">
+    <section class="slide slide-title-bg" data-slide="0">
+      <div class="slide-content" style="text-align: center;">
+        <div class="hero-kicker reveal">Documento di sintesi</div>
+        <div class="display-text reveal stagger-1">Finanziamenti per startup AI in Italia ed Europa</div>
+        <div class="title-tagline reveal stagger-2">strumenti attivi e rilevanti al 2 aprile 2026</div>
+        <div class="title-meta reveal stagger-3">startup italiana · consulenza AI · implementazione AI · framework proprietari</div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="1">
+      <div class="slide-content">
+        <div class="section-number reveal">01 &mdash; Sintesi Esecutiva</div>
+        <h2 class="slide-title reveal stagger-1">Quadro sintetico delle opzioni di finanziamento</h2>
+        <p class="slide-subtitle reveal stagger-2">Profilo considerato: startup italiana orientata allo sviluppo di framework e tool AI replicabili, alla personalizzazione per use case specifici e all'implementazione nei processi aziendali, con focus iniziale sul settore sociosanitario.</p>
+        <div class="summary-grid reveal stagger-3">
+          <div class="card">
+            <div class="card-number">Fonti identificate</div>
+            <div class="card-title">Tre famiglie di strumenti</div>
+            <div class="card-body">
+              <ul class="summary-list">
+                <li><span class="label">Strumenti immediatamente attivabili</span>Smart&amp;Start Italia, EIC Accelerator 2026 e TEF-Health Call 2 presentano una finestra di accesso già aperta o continuativa e non richiedono, in partenza, un consorzio europeo complesso.</li>
+                <li><span class="label">Strumenti di scala europea</span>EIC Accelerator 2026 e I3 Instrument 2026 offrono il maggiore potenziale di crescita in termini di ticket, visibilità europea e accesso a fasi di espansione.</li>
+                <li><span class="label">Strumenti condizionati</span>I bandi EIT Health e I3 Instrument richiedono maturità di prodotto, partner transnazionali, evidenze applicative o una struttura progettuale già orientata all'adozione su scala.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-number">Lettura operativa</div>
+            <div class="card-title">Sequenza logica di accesso</div>
+            <div class="card-body">
+              <ul class="summary-list">
+                <li><span class="label">Priorità</span>Smart&amp;Start Italia rappresenta lo strumento nazionale più immediato per sostenere asset, team e sviluppo industriale iniziale.</li>
+                <li><span class="label">Scala</span>EIC Accelerator 2026 è il principale strumento non diluitivo e misto per una startup singola con vocazione di mercato europeo.</li>
+                <li><span class="label">Verticalità salute</span>EIT Health e TEF-Health assumono rilevanza elevata quando la componente di prodotto medicale o di salute digitale è formalmente dimostrabile.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="2">
+      <div class="slide-content">
+        <div class="section-number reveal">02 &mdash; Posizionamento</div>
+        <h2 class="slide-title reveal stagger-1">Rilevanza del profilo startup ai fini dell'accesso ai bandi</h2>
+        <div class="comparison reveal stagger-2">
+          <div class="comparison-col old">
+            <h3>Profilo operativo</h3>
+            <div class="comparison-item">Startup italiana con attività combinata di consulenza AI, implementazione progettuale e sviluppo di tool/framework proprietari.</div>
+            <div class="comparison-item">Approccio replicabile: componenti software, framework metodologici e logiche di automazione riutilizzabili su più clienti e più processi.</div>
+            <div class="comparison-item">Personalizzazione per use case specifici: adattamento dei modelli ai processi aziendali, ai flussi documentali e ai sistemi informativi esistenti.</div>
+            <div class="comparison-item">Settore iniziale: sociosanitario, con possibilità di estensione successiva verso altri ambiti ad alta complessità operativa.</div>
+          </div>
+          <div class="comparison-col new">
+            <h3>Implicazione per i bandi</h3>
+            <div class="comparison-item">Alta rilevanza strategica per misure che privilegiano innovazione tecnologica, digitalizzazione e valorizzazione di proprietà intellettuale applicata.</div>
+            <div class="comparison-item">Applicabile quando il progetto è presentato come prodotto o piattaforma abilitante, non come sola prestazione consulenziale.</div>
+            <div class="comparison-item">Maggiore compatibilità con strumenti che richiedono scalabilità, trasferibilità e impatto misurabile su processi, costi, tempi o qualità del servizio.</div>
+            <div class="comparison-item">Verticale tecnologie per la salute rilevante quando il framework supporta salute digitale, AI medicale, validazione clinica o integrazione nei modelli di erogazione della cura.</div>
+          </div>
+        </div>
+        <div class="note-strip reveal stagger-3">Vincolo interpretativo principale: la componente di consulenza, se prevalente, riduce l'allineamento ai bandi centrati su sviluppo prodotto, validazione regolatoria o crescita industriale. Implicazione operativa: la narrazione progettuale deve privilegiare asset proprietari, replicabilità e roadmap di industrializzazione.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="3">
+      <div class="slide-content">
+        <div class="section-number reveal">03 &mdash; Panoramica</div>
+        <h2 class="slide-title reveal stagger-1">Classificazione degli strumenti selezionati</h2>
+        <div class="grid-2 reveal stagger-2">
+          <div class="card">
+            <div class="card-number">Strumenti nazionali</div>
+            <div class="card-title">Accesso diretto per startup innovativa</div>
+            <div class="card-body">Smart&amp;Start Italia è il riferimento nazionale più pertinente per una startup AI italiana in fase iniziale o di consolidamento, con logica a sportello e supporto fino a 1,5 milioni di euro.</div>
+          </div>
+          <div class="card">
+            <div class="card-number">Strumenti europei</div>
+            <div class="card-title">Scala e capitalizzazione</div>
+            <div class="card-body">EIC Accelerator 2026 e I3 Instrument 2026 presidiano le traiettorie europee di crescita: il primo per startup singola ad alta scalabilità, il secondo per progetti interregionali in consorzio vicini al mercato.</div>
+          </div>
+          <div class="card">
+            <div class="card-number">Verticali salute</div>
+            <div class="card-title">Validazione, adozione, ecosistema</div>
+            <div class="card-body">EIT Health Innovation Validation 2026, EIT Health New Models to Deliver Healthcare 2026 e TEF-Health Call 2 assumono rilevanza nel caso di soluzioni di salute digitale o AI medicale con requisiti di maturità tecnica e di adozione sanitaria.</div>
+          </div>
+          <div class="card">
+            <div class="card-number">Strumenti complementari</div>
+            <div class="card-title">Servizi e preparazione</div>
+            <div class="card-body">TEF-Health non eroga cassa ma servizi di test e validazione. Strumento adatto a rafforzare evidenze tecniche, conformità e readiness prima di una domanda grant di scala superiore.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="4">
+      <div class="slide-content">
+        <div class="section-number reveal">04 &mdash; Analisi Dettagliata</div>
+        <h2 class="slide-title reveal stagger-1">A. Smart&amp;Start Italia</h2>
+        <p class="slide-subtitle reveal stagger-2">Misura nazionale gestita da Invitalia per nascita e crescita di startup innovative ad alto contenuto tecnologico.</p>
+        <div class="fund-meta reveal stagger-3">
+          <div class="status-pill">Attivo · a sportello</div>
+          <div class="meta-chip">Importo: 100k &ndash; 1,5M €</div>
+          <div class="meta-chip">Copertura: fino all'80%, 90% in alcuni casi</div>
+          <div class="meta-chip">Requisito: startup innovativa, max 60 mesi</div>
+        </div>
+        <div class="detail-layout reveal stagger-4">
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Requisiti essenziali</div>
+              <ul class="detail-list">
+                <li><strong>Soggetto:</strong> startup innovativa iscritta alla sezione speciale del Registro delle imprese.</li>
+                <li><strong>Anzianità:</strong> costituzione da non più di 60 mesi.</li>
+                <li><strong>Spese:</strong> piani compresi tra 100.000 euro e 1,5 milioni di euro.</li>
+                <li><strong>Nota tecnica:</strong> nel Mezzogiorno è prevista una quota a fondo perduto, senza approfondimento ulteriore in questa sede.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Rilevanza strategica</div>
+              <div class="detail-text">Alta rilevanza strategica per la fase iniziale di strutturazione societaria, sviluppo del team, investimento in asset software e consolidamento del framework proprietario. Strumento adatto a iniziative con matrice AI e digitalizzazione esplicitamente riconducibili a un prodotto o a una piattaforma replicabile.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Vincoli</div>
+              <div class="detail-text">Vincolo principale: necessità di qualificazione come startup innovativa e presenza di un piano industriale che ecceda la mera prestazione professionale. L'intensità dell'aiuto è elevata, ma la misura resta ancorata a spese ammissibili definite e a un impianto progettuale strutturato.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Implicazioni operative</div>
+              <div class="detail-text">Implicazione operativa: priorità alla formalizzazione del perimetro prodotto, della roadmap di sviluppo e degli elementi di proprietarietà tecnologica. Presentazione adatta come primo strumento di finanziamento nazionale.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="5">
+      <div class="slide-content">
+        <div class="section-number reveal">05 &mdash; Analisi Dettagliata</div>
+        <h2 class="slide-title reveal stagger-1">B. EIC Accelerator 2026</h2>
+        <p class="slide-subtitle reveal stagger-2">Strumento europeo per startup e PMI singole con innovazione altamente scalabile e potenziale di mercato paneuropeo o globale.</p>
+        <div class="fund-meta reveal stagger-3">
+          <div class="status-pill">Aperto</div>
+          <div class="meta-chip">Grant: fino a 2,5M €</div>
+          <div class="meta-chip">Equity: 1 &ndash; 10M €</div>
+          <div class="meta-chip">Cutoff 2026: 6 maggio · 8 luglio · 2 settembre · 4 novembre</div>
+          <div class="meta-chip">Budget EIC Accelerator 2026: 634M €</div>
+        </div>
+        <div class="detail-layout reveal stagger-4">
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Requisiti essenziali</div>
+              <ul class="detail-list">
+                <li><strong>Soggetto:</strong> startup singola o PMI singola.</li>
+                <li><strong>Profilo richiesto:</strong> forte scalabilità, innovazione con capacità di creare o ridefinire mercati.</li>
+                <li><strong>Supporto:</strong> grant, equity o combinazione delle due componenti.</li>
+                <li><strong>Processo:</strong> short proposal con valutazione iniziale; successiva full proposal valutata per batch periodici.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Rilevanza strategica</div>
+              <div class="detail-text">Massima rilevanza strategica per una startup AI con framework proprietario, ambizione di crescita europea e possibilità di estendere il modello dal sociosanitario ad altri settori. È il principale canale europeo per associare grant e componente equity mantenendo un perimetro di candidatura individuale.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Vincoli</div>
+              <div class="detail-text">Vincolo principale: soglia qualitativa molto elevata in termini di maturità dell'innovazione, credibilità della scalabilità, dimensione del mercato indirizzabile e robustezza della strategia commerciale. La componente consulenziale, se prevalente, indebolisce il posizionamento.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Implicazioni operative</div>
+              <div class="detail-text">Implicazione operativa: candidatura sostenibile quando esiste una narrazione chiara di prodotto, metriche di trazione, strategia di espansione e una forte distinzione tra asset proprietario e servizi accessori di implementazione.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="6">
+      <div class="slide-content">
+        <div class="section-number reveal">06 &mdash; Analisi Dettagliata</div>
+        <h2 class="slide-title reveal stagger-1">C. EIT Health &ndash; Innovation Validation 2026</h2>
+        <p class="slide-subtitle reveal stagger-2">Call europea per soluzioni digitali e AI in ambito medicale orientate a validazione clinica, regolatoria e market readiness.</p>
+        <div class="fund-meta reveal stagger-3">
+          <div class="status-pill">Deadline 6 maggio 2026</div>
+          <div class="meta-chip">Funding: fino a 850k €</div>
+          <div class="meta-chip">Copertura: 50%</div>
+          <div class="meta-chip">Consorzio: minimo 2 paesi</div>
+          <div class="meta-chip">Livello: IML 6 &rarr; 7</div>
+        </div>
+        <div class="detail-layout reveal stagger-4">
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Requisiti essenziali</div>
+              <ul class="detail-list">
+                <li><strong>Focus:</strong> AI medicale o salute digitale con qualificazione come dispositivo medico digitale o soluzione equivalente nel perimetro della call.</li>
+                <li><strong>Consorzio:</strong> almeno due organizzazioni di paesi diversi e presenza di almeno due lati del knowledge triangle.</li>
+                <li><strong>Maturità:</strong> ingresso a IML 6, obiettivo IML 7 a fine progetto.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Rilevanza strategica</div>
+              <div class="detail-text">Alta rilevanza strategica quando il framework AI evolve in una soluzione di salute digitale con validazione clinica, dossier regolatorio o preparazione al lancio di mercato. Strumento adatto a casi in cui il settore sociosanitario non è solo verticale commerciale ma contesto di sperimentazione formale.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Vincoli</div>
+              <div class="detail-text">Vincolo principale: richiesta di consorzio internazionale e posizionamento esplicito su una soluzione medicale o regolabile. La call non è allineata a servizi di implementazione generici; richiede una traiettoria di prodotto avanzata e validabile.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Implicazioni operative</div>
+              <div class="detail-text">Implicazione operativa: utilità elevata solo in presenza di partner clinici o di ricerca già individuati e di una definizione precisa del caso d'uso sanitario, del percorso evidenziale e dell'architettura regolatoria.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="7">
+      <div class="slide-content">
+        <div class="section-number reveal">07 &mdash; Analisi Dettagliata</div>
+        <h2 class="slide-title reveal stagger-1">D. EIT Health &ndash; New Models to Deliver Healthcare 2026</h2>
+        <p class="slide-subtitle reveal stagger-2">Call rivolta a soluzioni già pronte per l'adozione reale nei sistemi di cura e nei modelli sanitari orientati agli esiti.</p>
+        <div class="fund-meta reveal stagger-3">
+          <div class="status-pill">Deadline 6 maggio 2026</div>
+          <div class="meta-chip">Funding: fino a 700k €</div>
+          <div class="meta-chip">Copertura: 50%</div>
+          <div class="meta-chip">Requisiti: CE marking ed ecosistema partner</div>
+          <div class="meta-chip">Consorzio transnazionale</div>
+        </div>
+        <div class="detail-layout reveal stagger-4">
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Requisiti essenziali</div>
+              <ul class="detail-list">
+                <li><strong>Soluzione:</strong> dispositivo medico digitale o IVD con marcatura CE e maturità molto avanzata.</li>
+                <li><strong>Ecosistema:</strong> soggetto commercializzante, provider sanitario, partner di health economics, integrazione IT e coinvolgimento del payor.</li>
+                <li><strong>Finalità:</strong> adozione reale e modelli di erogazione basati su outcome.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Rilevanza strategica</div>
+              <div class="detail-text">Rilevanza elevata solo in una fase avanzata, quando il prodotto AI nel verticale salute è già strutturato come soluzione regolata e pronto per integrazione in processi clinici o percorsi di cura. Strumento adatto all'adozione, non alla fase esplorativa.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Vincoli</div>
+              <div class="detail-text">Vincolo principale: marcatura CE e rete partner articolata. La call presuppone una transizione già compiuta dalla progettazione all'implementazione sistemica nel contesto sanitario.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Implicazioni operative</div>
+              <div class="detail-text">Implicazione operativa: opzione condizionata a una maturità prodotto molto superiore rispetto alla fase iniziale. Non risulta prioritaria per una startup ancora centrata su consulenza e framework generici.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="8">
+      <div class="slide-content">
+        <div class="section-number reveal">08 &mdash; Analisi Dettagliata</div>
+        <h2 class="slide-title reveal stagger-1">E. I3 Instrument 2026</h2>
+        <p class="slide-subtitle reveal stagger-2">Misura europea per investimenti interregionali e progetti vicini al mercato con logica di consorzio e specializzazione intelligente.</p>
+        <div class="fund-meta reveal stagger-3">
+          <div class="status-pill">Apertura 13 maggio 2026 · chiusura 12 novembre 2026</div>
+          <div class="meta-chip">Cofinanziamento: fino al 70%</div>
+          <div class="meta-chip">Logica: consorzio interregionale</div>
+          <div class="meta-chip">TRL indicativo: 6 &ndash; 9</div>
+        </div>
+        <div class="detail-layout reveal stagger-4">
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Requisiti essenziali</div>
+              <ul class="detail-list">
+                <li><strong>Struttura:</strong> consorzio con partner provenienti da differenti Stati membri e differenti ecosistemi regionali.</li>
+                <li><strong>Logica di intervento:</strong> investimenti interregionali e valorizzazione di smart specialisation.</li>
+                <li><strong>Stadio:</strong> progetto vicino al mercato e orientato alla commercializzazione.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Rilevanza strategica</div>
+              <div class="detail-text">Rilevanza strategica alta per una fase di espansione europea in cui il framework AI sia già validato e inseribile in una catena del valore interregionale, specialmente se il verticale salute è collegato a priorità regionali e a partner istituzionali o cluster.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Vincoli</div>
+              <div class="detail-text">Vincolo principale: costruzione del consorzio, allineamento con le priorità regionali S3 e impostazione di progetto orientata all'investimento, non alla sola sperimentazione. Complessità di candidatura superiore rispetto a strumenti monobeneficiario.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Implicazioni operative</div>
+              <div class="detail-text">Implicazione operativa: opzione da presidiare dopo la fase iniziale nazionale o dopo una prima validazione europea, non come primo strumento di ingresso. Rilevanza crescente in presenza di partner territoriali e industriali già attivi.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="9">
+      <div class="slide-content">
+        <div class="section-number reveal">09 &mdash; Analisi Dettagliata</div>
+        <h2 class="slide-title reveal stagger-1">F. TEF-Health Call 2</h2>
+        <p class="slide-subtitle reveal stagger-2">Programma europeo rolling di testing e validazione per AI e robotica in ambito salute, con supporto in servizi e non in forma di grant cash.</p>
+        <div class="fund-meta reveal stagger-3">
+          <div class="status-pill">Rolling fino al 31 dicembre 2027</div>
+          <div class="meta-chip">Supporto: servizi, non cash</div>
+          <div class="meta-chip">Valore: fino a 300k €</div>
+          <div class="meta-chip">Requisito: TRL 6+</div>
+        </div>
+        <div class="detail-layout reveal stagger-4">
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Requisiti essenziali</div>
+              <ul class="detail-list">
+                <li><strong>Soggetto:</strong> PMI registrata in UE o SEE.</li>
+                <li><strong>Maturità:</strong> soluzione AI o robotica a TRL 6 o superiore.</li>
+                <li><strong>Forma di supporto:</strong> servizi sovvenzionati o scontati sotto regime de minimis, entro 300k € per impresa su tre esercizi fiscali.</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="detail-block">
+              <div class="detail-title">Rilevanza strategica</div>
+              <div class="detail-text">Strumento adatto a consolidare test, conformità, sperimentazione e validazione tecnica nel verticale salute. Rilevanza elevata come passaggio preparatorio per candidature successive a bandi grant o per rafforzare la credibilità della soluzione in contesti regolati.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Vincoli</div>
+              <div class="detail-text">Vincolo principale: assenza di cassa diretta. Il valore è incorporato in servizi specialistici e richiede una soluzione già sufficientemente matura. Applicabilità limitata quando il progetto è ancora nella fase di definizione del prodotto.</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-title">Implicazioni operative</div>
+              <div class="detail-text">Implicazione operativa: strumento complementare, non sostitutivo di un grant. Può ridurre rischio tecnico e preparare evidenze funzionali utili per EIT Health o per una narrativa europea più robusta.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="10">
+      <div class="slide-content">
+        <div class="section-number reveal">10 &mdash; Tabella Comparativa</div>
+        <h2 class="slide-title reveal stagger-1">Confronto sintetico degli strumenti selezionati</h2>
+        <p class="slide-subtitle reveal stagger-2">Lettura comparativa per stato, intensità, complessità e coerenza con il profilo startup considerato.</p>
+        <div class="table-wrap reveal stagger-3">
+          <table class="fund-table" aria-label="Tabella comparativa strumenti di finanziamento">
+            <thead>
+              <tr>
+                <th>Strumento</th>
+                <th>Stato</th>
+                <th>Tipo supporto</th>
+                <th>Importo</th>
+                <th>Intensità</th>
+                <th>Complessità</th>
+                <th>Consorzio richiesto</th>
+                <th>Rilevanza strategica</th>
+                <th>Vincolo principale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Smart&amp;Start Italia</td><td>Attivo, a sportello</td><td>Finanziamento agevolato</td><td>100k &ndash; 1,5M €</td><td>Fino all'80%, 90% in alcuni casi</td><td>Media</td><td>No</td><td>Molto alta per avvio e strutturazione</td><td>Qualifica di startup innovativa e piano non puramente consulenziale</td></tr>
+              <tr><td>EIC Accelerator 2026</td><td>Aperto</td><td>Grant + equity</td><td>Grant fino a 2,5M €; equity 1&ndash;10M €</td><td>Molto elevata</td><td>Molto alta</td><td>No</td><td>Massima per scala europea</td><td>Scalabilità, maturità e narrazione di prodotto eccellente</td></tr>
+              <tr><td>EIT Health Innovation Validation 2026</td><td>Deadline 6 maggio 2026</td><td>Grant</td><td>Fino a 850k €</td><td>50%</td><td>Alta</td><td>Sì</td><td>Alta per salute digitale e AI medicale</td><td>Consorzio internazionale e maturità IML 6</td></tr>
+              <tr><td>EIT Health New Models to Deliver Healthcare 2026</td><td>Deadline 6 maggio 2026</td><td>Grant</td><td>Fino a 700k €</td><td>50%</td><td>Molto alta</td><td>Sì</td><td>Alta solo in fase molto avanzata</td><td>Marcatura CE e rete partner articolata</td></tr>
+              <tr><td>I3 Instrument 2026</td><td>13 maggio &ndash; 12 novembre 2026</td><td>Grant / cofinanziamento</td><td>Variabile per progetto</td><td>Fino al 70%</td><td>Alta</td><td>Sì</td><td>Alta per espansione interregionale</td><td>Consorzio, priorità S3 e progetto vicino al mercato</td></tr>
+              <tr><td>TEF-Health Call 2</td><td>Rolling fino al 2027</td><td>Servizi di test e validazione</td><td>Valore fino a 300k €</td><td>Servizi sovvenzionati</td><td>Media</td><td>No</td><td>Alta come leva complementare per tecnologie salute</td><td>TRL 6+ e assenza di cassa diretta</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="11">
+      <div class="slide-content">
+        <div class="section-number reveal">11 &mdash; Schema Decisionale</div>
+        <h2 class="slide-title reveal stagger-1">Gerarchia di priorità in funzione della maturità</h2>
+        <div class="decision-grid reveal stagger-2">
+          <div class="decision-card">
+            <div class="decision-title">Priorità immediate</div>
+            <p><strong>Smart&amp;Start Italia:</strong> strumento più immediato per assetto iniziale, spese di sviluppo e consolidamento della startup innovativa.</p>
+            <p><strong>EIC Accelerator 2026:</strong> applicabile in parallelo solo se il progetto è già leggibile come prodotto scalabile europeo e non come servizio su misura.</p>
+            <p><strong>TEF-Health Call 2:</strong> attivabile in presenza di un modulo salute almeno a TRL 6.</p>
+          </div>
+          <div class="decision-card">
+            <div class="decision-title">Opzioni medio termine</div>
+            <p><strong>EIT Health Innovation Validation 2026:</strong> applicabile quando esiste una soluzione medicale o di salute digitale con partner internazionali e percorso di validazione definito.</p>
+            <p><strong>I3 Instrument 2026:</strong> adatto dopo una prima trazione, con consorzio interregionale e allineamento a ecosistemi S3.</p>
+          </div>
+          <div class="decision-card">
+            <div class="decision-title">Opportunità condizionate</div>
+            <p><strong>EIT Health New Models to Deliver Healthcare 2026:</strong> rilevante solo con prodotto con marcatura CE e rete sanitaria completa.</p>
+            <p><strong>Altri strumenti health:</strong> fuori perimetro in questa analisi in assenza di requisiti di coerenza sufficientemente elevati o di rilevanza comparabile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="12">
+      <div class="slide-content">
+        <div class="section-number reveal">12 &mdash; Roadmap</div>
+        <h2 class="slide-title reveal stagger-1">Sequenza temporale di accesso agli strumenti</h2>
+        <p class="slide-subtitle reveal stagger-2">Roadmap sintetica basata sul livello di prontezza atteso e sulla progressione da strumento nazionale a strumento europeo di scala.</p>
+        <div class="timeline reveal stagger-3">
+          <div class="timeline-step"><div class="timeline-num">Fase 1</div><div class="timeline-title">Strumenti nazionali</div><div class="timeline-desc">Strutturazione della startup innovativa, piano di sviluppo, spese ammissibili e base finanziaria iniziale tramite Smart&amp;Start Italia.</div></div>
+          <div class="timeline-step"><div class="timeline-num">Fase 2</div><div class="timeline-title">Validazione / Salute</div><div class="timeline-desc">Attivazione di TEF-Health e, se presente un prodotto sanitario coerente, accesso a Innovation Validation con partner transnazionali.</div></div>
+          <div class="timeline-step"><div class="timeline-num">Fase 3</div><div class="timeline-title">Scala europea</div><div class="timeline-desc">Posizionamento su EIC Accelerator 2026 e successivamente su I3 Instrument per logiche di commercializzazione interregionale.</div></div>
+        </div>
+        <div class="note-strip reveal stagger-4">Implicazione operativa: la sequenza è progressiva. L'accesso a strumenti più complessi aumenta di efficacia quando la startup ha già convertito la propria offerta in un perimetro prodotto, in metriche di trazione e in una rete partner credibile.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide="13">
+      <div class="slide-content">
+        <div class="section-number reveal">13 &mdash; Vincoli Operativi</div>
+        <h2 class="slide-title reveal stagger-1">Condizioni trasversali da presidiare</h2>
+        <div class="values-grid reveal stagger-2">
+          <div class="value-item"><div class="value-name">Startup innovativa</div><div class="value-desc">Requisito necessario per Smart&amp;Start Italia. Implicazione operativa: assetto societario, oggetto sociale e indicatori di innovazione devono essere coerenti con la disciplina dedicata.</div></div>
+          <div class="value-item"><div class="value-name">Consorzi</div><div class="value-desc">Requisito necessario per EIT Health e I3. Il valore della proposta dipende dalla qualità funzionale dei partner, non dalla sola numerosità del consorzio.</div></div>
+          <div class="value-item"><div class="value-name">TRL / IML</div><div class="value-desc">Indicatore di maturità tecnica o di innovazione. Applicabile quando il prodotto è già sufficientemente definito da supportare test, validazione o adozione.</div></div>
+          <div class="value-item"><div class="value-name">Grant vs servizi</div><div class="value-desc">Il grant finanzia costi o investimenti progettuali; i servizi supportano test, validazione e conformità. Implicazione operativa: i due strumenti sono complementari ma non equivalenti.</div></div>
+          <div class="value-item"><div class="value-name">Prodotto vs consulenza</div><div class="value-desc">Differenza determinante per l'ammissibilità sostanziale. I bandi più competitivi privilegiano soluzioni proprietarie, scalabili e replicabili rispetto a servizi fortemente custom.</div></div>
+          <div class="value-item"><div class="value-name">Verticale salute</div><div class="value-desc">Il focus sociosanitario aumenta la rilevanza per specifiche call solo quando la soluzione entra nel perimetro della salute digitale, dell'AI medicale, della validazione clinica o dell'adozione nel sistema sanitario.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-closing-bg" data-slide="14">
+      <div class="slide-content" style="text-align: center;">
+        <div class="section-number reveal">14 &mdash; Conclusione</div>
+        <h2 class="slide-title reveal stagger-1">Sintesi finale</h2>
+        <p class="slide-subtitle reveal stagger-2" style="margin: 0 auto; text-align: center;">Strumento più immediato: <span class="highlight">Smart&amp;Start Italia</span>. Percorso più scalabile: <span class="highlight">EIC Accelerator 2026</span>. Strumenti condizionati: <span class="highlight">EIT Health</span>, <span class="highlight">I3 Instrument</span> e <span class="highlight">TEF-Health</span> in funzione di maturità prodotto, verticalizzazione health e disponibilità di partner.</p>
+        <div class="closing-domains reveal stagger-3">
+          <div class="closing-domain">Italia</div>
+          <div class="closing-domain">Europa</div>
+          <div class="closing-domain">Health-tech</div>
+          <div class="closing-domain">Scale-up</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const container = document.getElementById('slidesContainer');
+    const slides = document.querySelectorAll('.slide');
+    const progressFill = document.getElementById('progressFill');
+    const counterCurrent = document.getElementById('counterCurrent');
+    const counterTotal = document.getElementById('counterTotal');
+    const slideNav = document.getElementById('slideNav');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    counterTotal.textContent = totalSlides;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.dataset.slide = i;
+      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      dot.addEventListener('click', () => goToSlide(i));
+      slideNav.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.nav-dot');
+
+    function goToSlide(index) {
+      index = Math.max(0, Math.min(index, totalSlides - 1));
+      slides[index].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function updateUI(index) {
+      currentSlide = index;
+      progressFill.style.width = ((index + 1) / totalSlides * 100) + '%';
+      counterCurrent.textContent = index + 1;
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    document.addEventListener('keydown', (e) => {
+      switch (e.code) {
+        case 'ArrowDown':
+        case 'ArrowRight':
+        case 'Space':
+        case 'PageDown':
+          e.preventDefault();
+          goToSlide(currentSlide + 1);
+          break;
+        case 'ArrowUp':
+        case 'ArrowLeft':
+        case 'PageUp':
+          e.preventDefault();
+          goToSlide(currentSlide - 1);
+          break;
+        case 'Home':
+          e.preventDefault();
+          goToSlide(0);
+          break;
+        case 'End':
+          e.preventDefault();
+          goToSlide(totalSlides - 1);
+          break;
+      }
+    });
+
+    const slideObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = [...slides].indexOf(entry.target);
+          updateUI(index);
+        }
+      });
+    }, { threshold: 0.5, root: container });
+
+    slides.forEach((slide) => slideObserver.observe(slide));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1, root: container, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+    let touchStartY = 0;
+    container.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      if (window.innerWidth <= 900) return;
+      const diff = touchStartY - e.changedTouches[0].clientY;
+      if (Math.abs(diff) > 60) {
+        goToSlide(currentSlide + (diff > 0 ? 1 : -1));
+      }
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+    const savedTheme = localStorage.getItem('emergiva-theme') || 'dark';
+    htmlEl.setAttribute('data-theme', savedTheme);
+    themeToggle.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      htmlEl.setAttribute('data-theme', next);
+      localStorage.setItem('emergiva-theme', next);
+    });
+
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function createParticles() {
+      particles = [];
+      const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 14000));
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          r: Math.random() * 1.8 + 0.4,
+          alpha: Math.random() * 0.2 + 0.08
+        });
+      }
+    }
+
+    function getParticleColor() {
+      const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+      const isAltSlide = currentSlide % 2 === 1;
+      if (isDark) return isAltSlide ? '94,117,113' : '77,212,182';
+      return isAltSlide ? '28,110,92' : '38,150,126';
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const color = getParticleColor();
+      particles.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${color},${p.alpha})`;
+        ctx.fill();
+      });
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 160) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(${color},${(1 - dist / 160) * 0.12})`;
+            ctx.lineWidth = 0.4;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createParticles();
+    });
+
+    resizeCanvas();
+    createParticles();
+    drawParticles();
+  </script>
+</body>
+</html>
